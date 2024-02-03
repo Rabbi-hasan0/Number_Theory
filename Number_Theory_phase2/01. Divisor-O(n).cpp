@@ -8,15 +8,10 @@ int32_t main(){
   while(t--){
     int n;cin >> n;
 
-    set<int>divs;
-    for(int i = 1; i * i <= n; i++){
-    	if(n % i == 0){
-    		divs.insert(i);
-    		divs.insert(n / i);
-    	}
-    }
-    for(auto x:divs){
-    	cout << x << ' ';
+    for(int i = 1; i <= n; i++){
+      if(n % i == 0){
+        cout << i << ' ';
+      }
     }
   }
   return 0;
